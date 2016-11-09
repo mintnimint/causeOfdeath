@@ -1,0 +1,10 @@
+Cancer, 91.2
+Accident, 51.6
+Blood, 31.4
+HeartDisease, 28.9
+LungDisease, 25.7
+Nephritis, 21.6
+LiverDisease, 13.8
+CommitSuicide, 11.1
+Diabetes, 10.8
+Tuberculosis, 7.0
