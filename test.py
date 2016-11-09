@@ -1,5 +1,5 @@
 """Test Project"""
 def main():
-    print("^^")
+    print("")
     """Test"""
 minddddddd
