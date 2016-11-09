@@ -8,4 +8,3 @@ LiverDisease, 8562
 CommitSuicide, 6642
 Diabetes, 7019
 Tuberculosis, 4568
-
