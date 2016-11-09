@@ -1,0 +1,10 @@
+Cancer, 61082
+Accident, 33868
+Blood, 22947
+HeartDisease, 20130
+LungDisease, 16884
+Nephritis, 14753
+LiverDisease, 9009
+CommitSuicide, 6814
+Diabetes, 7625
+Tuberculosis, 4784
