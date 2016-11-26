@@ -1,6 +1,10 @@
 Cancer, 67692
 Accident, 32422
+<<<<<<< HEAD
 HighBlood, 28408
+=======
+BloodPressure, 28408
+>>>>>>> origin/master
 HeartDisease, 24597
 LungDisease, 21676
 Nephritis, 15162

@@ -1,6 +1,6 @@
 Cancer, 104.8
 Accident, 50.2
-Blood, 44.0
+HighBloodPressure, 44.0
 HeartDisease, 38.1
 LungDisease, 33.5
 Nephritis, 23.5
