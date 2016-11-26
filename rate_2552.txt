@@ -1,6 +1,5 @@
 Cancer, 88.3
-Accident, 55.6
-Blood, 24.7
+Accident, 55.6, 24.7
 HeartDisease, 29
 LungDisease, 22.9
 Nephritis, 20.8
