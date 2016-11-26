@@ -1,6 +1,6 @@
 Cancer, 56058
 Accident, 35304
-Blood, 15648
+HighBloodPressure, 15648
 HeartDisease, 18375
 LungDisease, 14542
 Nephritis, 13191
