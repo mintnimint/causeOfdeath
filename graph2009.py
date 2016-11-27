@@ -1,4 +1,4 @@
-"""Plot Graph"""
+"""Plot Graph by matplotlib"""
 
 import matplotlib.pyplot as plt
 
