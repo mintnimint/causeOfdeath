@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 # The slices will be ordered and plotted counter-clockwise.
 def graph2010():
+    """show graph that Plot total of cause death year 2010"""
     labels = "Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease", "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes", "Tuberculosis"
     sizes = [58076, 32861, 20018, 18399, 16369, 13763, 8788, 7062, 6855, 4467]
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'yellow', 'red', 'white', 'blue', 'magenta', 'cyan']
