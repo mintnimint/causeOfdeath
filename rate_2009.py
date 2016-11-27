@@ -17,4 +17,4 @@ ax.set_xticklabels(("Cancer and Tumor", "Accidents", "High Blood Pressure", "Hea
                      "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                      "Tuberculosis"))
 
-plt.show(
+plt.show()
