@@ -16,4 +16,3 @@ plt.pie(sizes, explode=explode, labels=labels, colors=colors,
 plt.axis('equal')
 
 plt.show()
-
