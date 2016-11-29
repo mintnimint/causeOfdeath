@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def rate_2009():
+    """show rate graph cause of death in year 2009"""
     n = 10
     rate = (88.3, 55.6, 24.7, 29, 22.9, 20.8, 13.5, 10.5, 11.1, 7.2)
     ind = np.arange(n)
