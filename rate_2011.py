@@ -12,7 +12,7 @@ rects1 = ax.bar(ind + width, rate, width, color="r")
 
 ax.set_ylabel("Rates")
 ax.set_title("Cause of Death in Year 2011 (Rates)")
-ax.set_xticks(ind + width)
+ax.set_xticks(ind + width + 0.2)
 ax.set_xticklabels(("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
                      "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                      "Tuberculosis"), rotation="vertical")
