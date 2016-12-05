@@ -34,6 +34,16 @@ def main():
                      color=get_color(year),
                      error_kw=error_config,
                      label=year)
+ 
+    plt.ylabel('Rates')
+    plt.xlabel('Cause of Death')
+    plt.title('Cause of Death in Year ' + str(year) + ' (Rates)')
+    plt.xticks(index + bar_width, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
+                                   "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
+                                   "Tuberculosis"), rotation="vertical")
+    plt.legend()
+    plt.tight_layout() 
+    plt.show()
     
 def year_2009():
     """Show bar chart """
