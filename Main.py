@@ -83,10 +83,10 @@ def main():
     """ Display """
     fig, ax = plt.subplots()
     index = np.arange(n_groups)
-    bar_width = 0.35
+    bar_width = 0.4
     opacity = 0.4
     error_config = {'ecolor': '0.3'}
-    rects1 = plt.bar(index, means_men, bar_width,\
+    rects1 = plt.bar(index+0.4, means_men, bar_width,\
                      alpha=opacity,
                      color=get_color(year),
                      error_kw=error_config,
@@ -95,7 +95,7 @@ def main():
     plt.ylabel('Rates')
     plt.xlabel('Cause of Death')
     plt.title('Cause of Death in Year ' + str(year) + ' (Rates)')
-    plt.xticks(index + bar_width, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
+    plt.xticks(index + bar_width + 0.2, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
                                    "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                                    "Tuberculosis"), rotation="vertical")
     plt.legend()
