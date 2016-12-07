@@ -5,7 +5,7 @@ import xlrd
 
 def total_year():
     """Show bar chart """
-    path = 'C:/Users/Baimint/Desktop/causeOfdeath/data1.xls'
+    path = 'C:/Users/Baimint/Desktop/causeOfdeath/data1.xls' #currentWorkingdirectory
     workbook = xlrd.open_workbook(path) 
     worksheet = workbook.sheet_by_index(0) 
     data_set = [[worksheet.cell_value(row,col) for col in range(worksheet.ncols)] for
