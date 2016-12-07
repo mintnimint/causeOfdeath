@@ -20,30 +20,30 @@ def get_dataset(worksheet):
 
 def get_means_men(data_set, year):
     if (year == 2009):
-        return (float(data_set[3][2]), float(data_set[4][2]), float(data_set[5][2]),\
-                 float(data_set[6][2]), float(data_set[7][2]),float(data_set[8][2]),\
-                 float(data_set[9][2]), float(data_set[10][2]),\
-                 float(data_set[11][2]), float(data_set[12][2]))
+        return (float(data_set[3][1]), float(data_set[4][1]), float(data_set[5][1]),\
+                 float(data_set[6][1]), float(data_set[7][1]),float(data_set[8][1]),\
+                 float(data_set[9][1]), float(data_set[10][1]),\
+                 float(data_set[11][1]), float(data_set[12][1]))
     elif (year == 2010):
-        return (float(data_set[3][4]), float(data_set[4][4]), float(data_set[5][4]),\
-                 float(data_set[6][4]), float(data_set[7][4]),float(data_set[8][4]),\
-                 float(data_set[9][4]), float(data_set[10][4]),\
-                 float(data_set[11][4]), float(data_set[12][4]))
+        return (float(data_set[3][3]), float(data_set[4][3]), float(data_set[5][3]),\
+                 float(data_set[6][3]), float(data_set[7][3]),float(data_set[8][3]),\
+                 float(data_set[9][3]), float(data_set[10][3]),\
+                 float(data_set[11][3]), float(data_set[12][3]))
     elif (year == 2011):
-        return (float(data_set[3][6]), float(data_set[4][6]), float(data_set[5][6]),\
-                 float(data_set[6][6]), float(data_set[7][6]),float(data_set[8][6]),\
-                 float(data_set[9][6]), float(data_set[10][6]),\
-                 float(data_set[11][6]), float(data_set[12][6]))
+        return (float(data_set[3][5]), float(data_set[4][5]), float(data_set[5][5]),\
+                 float(data_set[6][5]), float(data_set[7][5]),float(data_set[8][5]),\
+                 float(data_set[9][5]), float(data_set[10][5]),\
+                 float(data_set[11][5]), float(data_set[12][5]))
     elif (year == 2012):
-        return (float(data_set[3][8]), float(data_set[4][8]), float(data_set[5][8]),\
-                 float(data_set[6][8]), float(data_set[7][8]),float(data_set[8][8]),\
-                 float(data_set[9][8]), float(data_set[10][8]),\
-                 float(data_set[11][8]), float(data_set[12][8]))
+        return (float(data_set[3][7]), float(data_set[4][7]), float(data_set[5][7]),\
+                 float(data_set[6][7]), float(data_set[7][7]),float(data_set[8][7]),\
+                 float(data_set[9][7]), float(data_set[10][7]),\
+                 float(data_set[11][7]), float(data_set[12][7]))
     elif (year == 2013):
-        return (float(data_set[3][10]), float(data_set[4][10]), float(data_set[5][10]),\
-                 float(data_set[6][10]), float(data_set[7][10]),float(data_set[8][10]),\
-                 float(data_set[9][10]), float(data_set[10][10]),\
-                 float(data_set[11][10]), float(data_set[12][10]))
+        return (float(data_set[3][9]), float(data_set[4][9]), float(data_set[5][9]),\
+                 float(data_set[6][9]), float(data_set[7][9]),float(data_set[8][9]),\
+                 float(data_set[9][9]), float(data_set[10][9]),\
+                 float(data_set[11][9]), float(data_set[12][9]))
     else:
         print ("Error")
 
@@ -92,9 +92,9 @@ def main():
                      error_kw=error_config,
                      label=year)
  
-    plt.ylabel('Rates')
+    plt.ylabel('Amount')
     plt.xlabel('Cause of Death')
-    plt.title('Cause of Death in Year ' + str(year) + ' (Rates)')
+    plt.title('Cause of Death in Year ' + str(year) + ' (Amount)')
     plt.xticks(index + bar_width + 0.2, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
                                    "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                                    "Tuberculosis"), rotation="vertical")

@@ -5,7 +5,7 @@ import xlrd
 
 def total_year():
     """Show bar chart """
-    path = 'C:\Python34\ProjectPython\data1.xls'
+    path = 'C:/Users/Baimint/Desktop/causeOfdeath/data1.xls'
     workbook = xlrd.open_workbook(path) 
     worksheet = workbook.sheet_by_index(0) 
     data_set = [[worksheet.cell_value(row,col) for col in range(worksheet.ncols)] for
@@ -36,10 +36,10 @@ def total_year():
  
     fig, ax = plt.subplots()
     index = np.arange(n_groups)
-    bar_width = 0.35
+    bar_width = 0.4
     opacity = 0.4
     error_config = {'ecolor': '0.3'}
-    rects1 = plt.bar(index, data, bar_width,\
+    rects1 = plt.bar(index+0.2, data, bar_width,\
                      alpha=opacity,
                      error_kw=error_config,
                      label='2009 - 2013')

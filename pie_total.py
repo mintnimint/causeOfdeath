@@ -5,7 +5,7 @@ import xlrd
 
 def pie_chart():
     """show pie chart that Plot total of cause death year 2009 - 2013"""
-    path = 'C:\Python34\ProjectPython\data1.xls'
+    path = 'C:/Users/Baimint/Desktop/causeOfdeath/data1.xls'
     workbook = xlrd.open_workbook(path) 
     worksheet = workbook.sheet_by_index(0) 
     data_set = [[worksheet.cell_value(row,col) for col in range(worksheet.ncols)] for
