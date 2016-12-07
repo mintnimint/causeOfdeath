@@ -98,6 +98,11 @@ def main():
     plt.xticks(index + bar_width + 0.2, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
                                    "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                                    "Tuberculosis"), rotation="vertical")
+    for rect in rects1:
+        height = rect.get_height()
+        ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
+                int(height),
+                ha='center', va='bottom')
     plt.legend()
     plt.tight_layout() 
     plt.show()
