@@ -11,57 +11,35 @@ def total_year():
     data_set = [[worksheet.cell_value(row,col) for col in range(worksheet.ncols)] for
                 row in range(worksheet.nrows)]
     n_groups = 10
-    cancer = sum((float(data_set[3][2]), float(data_set[3][4]), float(data_set[3][6]),\
-                 float(data_set[3][8]),float(data_set[3][10])))
-    accident = sum((float(data_set[4][2]), float(data_set[4][4]), float(data_set[4][6]),\
-                 float(data_set[4][8]),float(data_set[4][10])))
-    high_bd = sum((float(data_set[5][2]), float(data_set[5][4]), float(data_set[5][6]),\
-                 float(data_set[5][8]),float(data_set[5][10])))
-    heart_ds = sum((float(data_set[6][2]), float(data_set[6][4]), float(data_set[6][6]),\
-                 float(data_set[6][8]),float(data_set[6][10])))
-    lung_ds = sum((float(data_set[7][2]), float(data_set[7][4]), float(data_set[7][6]),\
-                 float(data_set[7][8]),float(data_set[7][10])))
-    nephrit = sum((float(data_set[8][2]), float(data_set[8][4]), float(data_set[8][6]),\
-                 float(data_set[8][8]),float(data_set[8][10])))
-    liver_ds = sum((float(data_set[9][2]), float(data_set[9][4]), float(data_set[9][6]),\
-                 float(data_set[9][8]),float(data_set[9][10])))
-    commit_sc = sum((float(data_set[10][2]), float(data_set[10][4]), float(data_set[10][6]),\
-                 float(data_set[10][8]),float(data_set[10][10])))
-    diabetes = sum((float(data_set[11][2]), float(data_set[11][4]), float(data_set[11][6]),\
-                 float(data_set[11][8]),float(data_set[11][10])))
-    tubercul = sum((float(data_set[12][2]), float(data_set[12][4]), float(data_set[12][6]),\
-                 float(data_set[12][8]),float(data_set[12][10])))
-    data = (float(cancer), float(accident), float(high_bd),float(heart_ds), float(lung_ds),\
-            float(nephrit), float(liver_ds), float(commit_sc),float(diabetes), float(tubercul))
+    amount_2009 = (float(data_set[3][1]), float(data_set[4][1]), float(data_set[5][1]), float(data_set[6][1]), float(data_set[7][1]),\
+                   float(data_set[8][1]), float(data_set[9][1]), float(data_set[10][1]), float(data_set[11][1]), float(data_set[12][1]))
+    amount_2010 = (float(data_set[3][3]), float(data_set[4][3]), float(data_set[5][3]), float(data_set[6][3]), float(data_set[7][3]),\
+                   float(data_set[8][3]), float(data_set[9][3]), float(data_set[10][3]), float(data_set[11][3]), float(data_set[12][3]))
+    amount_2011 = (float(data_set[3][5]), float(data_set[4][5]), float(data_set[5][5]), float(data_set[6][5]), float(data_set[7][5]),\
+                   float(data_set[8][5]), float(data_set[9][5]), float(data_set[10][5]), float(data_set[11][5]), float(data_set[12][5]))
+    amount_2012 = (float(data_set[3][7]), float(data_set[4][7]), float(data_set[5][7]), float(data_set[6][7]), float(data_set[7][7]),\
+                   float(data_set[8][7]), float(data_set[9][7]), float(data_set[10][7]), float(data_set[11][7]), float(data_set[12][7]))
+    amount_2013 = (float(data_set[3][9]), float(data_set[4][9]), float(data_set[5][9]), float(data_set[6][9]), float(data_set[7][9]),\
+                   float(data_set[8][9]), float(data_set[9][9]), float(data_set[10][9]), float(data_set[11][9]), float(data_set[12][9]))
  
     fig, ax = plt.subplots()
     index = np.arange(n_groups)
-    bar_width = 0.4
+    bar_width = 0.15
     opacity = 0.4
-    error_config = {'ecolor': '0.3'}
-    rects1 = plt.bar(index+0.2, data, bar_width,\
-                     alpha=opacity,
-                     error_kw=error_config,
-                     label='2009 - 2013')
-    
-    rects1[0].set_color('yellowgreen')
-    rects1[1].set_color('gold')
-    rects1[2].set_color('lightskyblue')
-    rects1[3].set_color('lightcoral')
-    rects1[4].set_color('lightgrey')
-    rects1[5].set_color('tomato')
-    rects1[6].set_color('seagreen')
-    rects1[7].set_color('royalblue')
-    rects1[8].set_color('sienna')
-    rects1[9].set_color('tan')
+
+    rects1 = ax.bar(index + bar_width, amount_2009, bar_width, color="gold")
+    rects2 = ax.bar(index + bar_width*2, amount_2010, bar_width, color="lightskyblue")
+    rects3 = ax.bar((index + bar_width*3), amount_2011, bar_width, color="tomato")
+    rects4 = ax.bar((index + bar_width*4), amount_2012, bar_width, color="seagreen")
+    rects5 = ax.bar((index + bar_width*5), amount_2013, bar_width, color="tan")
 
     plt.ylabel('Rates')
     plt.xlabel('Cause of Death')
-    plt.title('Cause of Death in Year 2009-2013 (Rates)')
-    plt.xticks(index + bar_width, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
+    plt.title('Cause of Death in Year 2009-2013 (Amount)')
+    plt.xticks(index + bar_width + 0.4, ("Cancer and Tumor", "Accidents", "High Blood Pressure", "Heart Disease",\
                                    "Lung Disease", "Nephritis", "Liver Disease", "Commit Suicide", "Diabetes",\
                                    "Tuberculosis"), rotation="vertical")
-    plt.legend()
+    plt.legend((rects1[0], rects2[0], rects3[0], rects4[0], rects5[0]),("Year 2009", "Year 2010", "Year 2011", "Year 2012", "Year 2013"))
     plt.tight_layout() 
     plt.show()
     
